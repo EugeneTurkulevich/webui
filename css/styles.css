@@ -59,13 +59,11 @@ button
 /* Mobile (до 767px) */
 @media (max-width: 767px)
 {
-    /* Стилі для мобільних пристроїв */
 }
 
 /* Tablet (від 768px до 1023px) */
 @media (min-width: 768px) and (max-width: 1023px)
 {
-    /* Стилі для планшетів */
 }
 
 
@@ -140,6 +138,8 @@ button
     display: flex;
     align-items: center;
     flex-direction: row;
+
+    transition: all 1s ease;
 
     gap: 40px;
 }
@@ -307,6 +307,15 @@ button
     background-size: cover;
 }
 
+.hero-container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 48px;
+}
+
 .hero-title
 {
     font-size: 56px;
@@ -316,7 +325,7 @@ button
     display: block;
 
     max-width: 496px;
-    margin: 0 auto 48px;
+    /*    margin: 0 auto 48px;*/
 
     text-align: center;
     letter-spacing: .02em;
@@ -376,15 +385,15 @@ button
         url(../images/people-office2-NO.jpg);
     }
 
-    .hero-title
+    .hero-container
     {
-        font-size: 42px;
-        line-height: 1.2;
+        gap: 72px;
     }
 
     .hero-title
     {
-        margin: 0 auto 72px;
+        font-size: 42px;
+        line-height: 1.2;
     }
 }
 
@@ -401,6 +410,66 @@ button
         rgba(46, 47, 66, .7)
         ),
         url(../images/people-office2-NO.jpg);
+    }
+
+    .hero-container
+    {
+        gap: 36px;
+    }
+}
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––> (sections) <–––––––––––––––––––––––––––––––––––––––––––––– */
+
+.content-section
+{
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.section-list
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /*    column-gap: 24px;*/
+    /*    row-gap: 48px;*/
+
+    gap: 48px 24px;
+}
+
+.section-title
+{
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    /*    margin-top: 120px;*/
+
+    margin-bottom: 72px;
+
+    text-align: center;
+    letter-spacing: .02em;
+    text-transform: capitalize;
+
+    color: #2e2f42;
+}
+
+/* Mobile (до 767px) */
+@media (max-width: 767px)
+{
+    .content-section
+    {
+        padding-top: 96px;
+        padding-bottom: 96px;
+    }
+}
+
+/* Tablet (від 768px до 1023px) */
+@media (min-width: 768px) and (max-width: 1023px)
+{
+    .content-section
+    {
+        padding-top: 96px;
+        padding-bottom: 96px;
     }
 }
 
@@ -425,18 +494,7 @@ button
     clip-path: inset(100%);
 }
 
-.features
-{
-    padding-top: 120px;
-    padding-bottom: 120px;
-}
 
-.features-list
-{
-    display: flex;
-
-    gap: 24px;
-}
 
 .features-item
 {
@@ -469,6 +527,7 @@ button
 
     color: #2e2f42;
 }
+
 .features-text
 {
     font-size: 16px;
@@ -478,36 +537,73 @@ button
 
     color: #434455;
 }
-.content-section
+
+/* Mobile (до 767px) */
+@media (max-width: 767px)
 {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    .features
+    {
+        padding-top: 96px;
+        padding-bottom: 96px;
+    }
+
+    .features-icons
+    {
+        display: none;
+    }
+
+    .features-list
+    {
+        display: flex;
+        flex-direction: column;
+
+        gap: 72px;
+    }
+
+    .features-item
+    {
+        flex-basis: calc((100% - 3 * 24px) / 4);
+    }
+
+    .features-subtitle
+    {
+        font-size: 28px;
+
+        text-align: center;
+    }
 }
 
-.section-list
+/* Tablet (від 768px до 1023px) */
+@media (min-width: 768px) and (max-width: 1023px)
 {
-    display: flex;
-    flex-wrap: wrap;
+    .features
+    {
+        padding-top: 96px;
+        padding-bottom: 96px;
+    }
 
-    column-gap: 24px;
-    row-gap: 48px;
+    .features-icons
+    {
+        display: none;
+    }
+
+    .features-list
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        gap: 72px 24px;
+    }
+
+    .features-item
+    {
+        flex-basis: calc((100% - 24px) / 2);
+    }
 }
 
-.section-title
-{
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 1.11;
 
-    margin-top: 120px;
-    margin-bottom: 72px;
-
-    text-align: center;
-    letter-spacing: .02em;
-    text-transform: capitalize;
-
-    color: #2e2f42;
-}
+/* ––––––––––––––––––––––––––––––––––––––––––––––> TEAM <–––––––––––––––––––––––––––––––––––––––––––––– */
 
 .content-section.team
 {
@@ -516,7 +612,8 @@ button
 
 .team-item
 {
-    flex-basis: calc((100% - 3 * 24px) / 4);
+    /*    flex-basis: calc((100% - 3 * 24px) / 4);*/
+    min-width: 264px;
 
     border-radius: 0 0 4px 4px;
     background: #fff;
@@ -600,6 +697,21 @@ button
     fill: #f4f4fd;
 }
 
+/* Mobile (до 767px) */
+@media (max-width: 767px)
+{
+    /* Стилі для мобільних пристроїв */
+}
+
+/* Tablet (від 768px до 1023px) */
+@media (min-width: 768px) and (max-width: 1023px)
+{
+    /* Стилі для планшетів */
+}
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––> PORTFOLIO <–––––––––––––––––––––––––––––––––––––––––––––– */
+
+
 .portfolio-item
 {
     cursor: pointer;
@@ -619,8 +731,6 @@ button
     border: 1px solid #e7e9fc;
     border-top: none;
 }
-
-
 
 .portfolio-subtitle
 {
@@ -681,6 +791,20 @@ button
     transform: translateY(0%);
 }
 
+/* Mobile (до 767px) */
+@media (max-width: 767px)
+{
+    /* Стилі для мобільних пристроїв */
+}
+
+/* Tablet (від 768px до 1023px) */
+@media (min-width: 768px) and (max-width: 1023px)
+{
+    /* Стилі для планшетів */
+}
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––> FOOTER <–––––––––––––––––––––––––––––––––––––––––––––– */
+
 .page-footer
 {
     padding-top: 100px;
@@ -693,11 +817,20 @@ button
 {
     display: flex;
     align-items: baseline;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 72px 24px;
 }
 
 .footer-container-logo
 {
-    margin-right: 120px;
+    /*    margin-right: auto;*/
+}
+
+.footer-container
+{
+    margin-right: auto;
 }
 
 .footer-logo
@@ -794,7 +927,7 @@ button
 {
     display: block;
 
-    margin-left: auto;
+    /*    margin-left: auto;*/
 }
 
 .footer-subscribe-heading
@@ -906,6 +1039,57 @@ button
 
     fill: #fff;
 }
+
+/* Mobile (до 767px) */
+@media (max-width: 767px)
+{
+    .page-footer .container
+    {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        gap: 72px;
+    }
+
+    .footer-container-logo
+    {
+        text-align: center;
+    }
+
+    .footer-section-heading
+    {
+        text-align: center;
+    }
+
+    .footer-subscribe-heading
+    {
+        text-align: center;
+    }
+
+    .footer-subscribe-form
+    {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .footer-container
+    {
+        margin-right: 0;
+    }
+}
+
+/* Tablet (від 768px до 1023px) */
+@media (min-width: 768px) and (max-width: 1023px)
+{
+    .footer-container
+    {
+        margin-right: 0;
+    }
+}
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––> MODAL <–––––––––––––––––––––––––––––––––––––––––––––– */
 
 .backdrop
 {

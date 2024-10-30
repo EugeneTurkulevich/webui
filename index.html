@@ -26,14 +26,6 @@
         <a class="header-logo" href="./index.html"
           >Web<span class="logo-part">Studio</span></a
         >
-        <button class="menu-toggle">
-          ☰
-          <!-- 
-            <svg class="icon" width="16" height="16">
-              <use href="./images/icons.svg#icon-menu"></use>
-            </svg>
- -->
-        </button>
         <nav class="header-navigation">
           <ul class="header-menu-list">
             <li class="header-menu-item">
@@ -61,21 +53,29 @@
             </li>
           </ul>
         </address>
+        <button class="menu-toggle">
+          ☰
+          <!-- 
+            <svg class="icon" width="16" height="16">
+              <use href="./images/icons.svg#icon-menu"></use>
+            </svg>
+ -->
+        </button>
       </div>
     </header>
     <main>
       <!-- /* ––––––––––––––––––––––––––––––––––––––––––––––> HERO <–––––––––––––––––––––––––––––––––––––––––––––– */ -->
       <section class="hero">
-        <div class="container">
+        <div class="container hero-container">
           <h1 class="hero-title">Effective Solutions for&nbsp;Your Business</h1>
           <button class="hero-btn" type="button">Order Service</button>
         </div>
       </section>
       <!-- /* ––––––––––––––––––––––––––––––––––––––––––––––> FEATURES <–––––––––––––––––––––––––––––––––––––––––––––– */ -->
-      <section class="features">
+      <section class="features content-section">
         <div class="container">
-          <h2 class="visually-hidden">Features</h2>
-          <ul class="features-list">
+          <h2 class="visually-hidden section-title">Features</h2>
+          <ul class="features-list section-list">
             <li class="features-item">
               <div class="features-icons">
                 <svg class="icon" width="64" height="64">
@@ -127,6 +127,7 @@
           </ul>
         </div>
       </section>
+      <!-- /* ––––––––––––––––––––––––––––––––––––––––––––––> TEAM <–––––––––––––––––––––––––––––––––––––––––––––– */ -->
       <section class="team content-section">
         <div class="container">
           <h2 class="team-title section-title">Our Team</h2>
@@ -354,6 +355,7 @@
           </ul>
         </div>
       </section>
+      <!-- /* ––––––––––––––––––––––––––––––––––––––––––––––> PORTFOLIO <–––––––––––––––––––––––––––––––––––––––––––––– */ -->
       <section class="portfolio content-section">
         <div class="container">
           <h2 class="portfolio-title section-title">Our Portfolio</h2>
@@ -486,12 +488,15 @@
         </div>
       </section>
     </main>
+    <!-- /* ––––––––––––––––––––––––––––––––––––––––––––––> FOOTER <–––––––––––––––––––––––––––––––––––––––––––––– */ -->
     <footer class="page-footer">
       <div class="container">
-        <div class="footer-container footer-container-logo">
-          <a class="footer-logo" href="./index.html"
-            >Web<span class="footer-logo-part">Studio</span></a
-          >
+        <div class="footer-container">
+          <div class="footer-container-logo">
+            <a class="footer-logo" href="./index.html"
+              >Web<span class="footer-logo-part">Studio</span></a
+            >
+          </div>
           <p class="footer-text">
             Increase the flow of customers and sales for your business with
             digital marketing & growth solutions.
@@ -552,6 +557,7 @@
         </div>
       </div>
     </footer>
+    <!-- /* ––––––––––––––––––––––––––––––––––––––––––––––> MODAL <–––––––––––––––––––––––––––––––––––––––––––––– */ -->
     <!-- <div class="backdrop is-open"> -->
     <div class="backdrop">
       <div class="modal">
@@ -635,5 +641,6 @@
         </form>
       </div>
     </div>
+    <!-- /* ––––––––––––––––––––––––––––––––––––––––––––––>  <–––––––––––––––––––––––––––––––––––––––––––––– */ -->
   </body>
 </html>
