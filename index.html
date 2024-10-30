@@ -68,7 +68,12 @@
       <section class="hero">
         <div class="container hero-container">
           <h1 class="hero-title">Effective Solutions for&nbsp;Your Business</h1>
-          <button class="hero-btn" type="button">Order Service</button>
+
+          <!-- for modal open without js: -->
+          <label for="modal-toggle" class="open-modal-btn hero-btn"
+            >Order Service</label
+          >
+          <!-- <button class="hero-btn" type="button">Order Service</button> -->
         </div>
       </section>
       <!-- /* ––––––––––––––––––––––––––––––––––––––––––––––> FEATURES <–––––––––––––––––––––––––––––––––––––––––––––– */ -->
@@ -558,6 +563,11 @@
       </div>
     </footer>
     <!-- /* ––––––––––––––––––––––––––––––––––––––––––––––> MODAL <–––––––––––––––––––––––––––––––––––––––––––––– */ -->
+
+    <!-- for modal display without js -->
+    <input type="checkbox" id="modal-toggle" class="modal-toggle" />
+    <!-- for modal display without js -->
+
     <!-- <div class="backdrop is-open"> -->
     <div class="backdrop">
       <div class="modal">
@@ -637,7 +647,12 @@
               <a href="" class="privacy-policy-link">Privacy Policy</a></label
             >
           </div>
-          <button class="modal-send-btn" type="submit">Send</button>
+
+          <!-- for modal close without js -->
+          <label for="modal-toggle" class="modal-send-btn close-modal-btn"
+            >Send</label
+          >
+          <!-- <button class="modal-send-btn" type="submit">Send</button> -->
         </form>
       </div>
     </div>

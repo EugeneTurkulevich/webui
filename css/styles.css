@@ -1091,6 +1091,12 @@ button
 
 /* ––––––––––––––––––––––––––––––––––––––––––––––> MODAL <–––––––––––––––––––––––––––––––––––––––––––––– */
 
+/* modal-toggle is for display modal without js */
+.modal-toggle
+{
+    display: none;
+}
+
 .backdrop
 {
     position: fixed;
@@ -1107,12 +1113,15 @@ button
     pointer-events: none;
     /* display: flex;
   justify-content: center;
-  align-items: center; */
+  align-items: center; 
+*/
 
     opacity: 0;
     background-color: rgba(46, 47, 66, .4);
 }
 
+/* modal-toggle is for display modal without js */
+.modal-toggle:checked + .backdrop,
 .is-open
 {
     visibility: visible;
