@@ -1,0 +1,11 @@
+{
+  "name": "webui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "csscomb css/styles.css; npx prettier --write index.html"
+  },
+  "author": "",
+  "license": "ISC"
+}
